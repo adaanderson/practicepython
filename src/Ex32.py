@@ -1,14 +1,14 @@
 from random import sample
 
 with open('sowpods.txt', 'r') as open_file:
-    names = set()
+    names = ()
        
     while True:
         line = open_file.readline()
         if not line:
             break
         x = line.replace('\n', '')
-        names.add(x)
+        names.append(x)
         
 draft_word = sample(names,1)
 
