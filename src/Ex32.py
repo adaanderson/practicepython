@@ -1,7 +1,7 @@
 from random import sample
 
 with open('sowpods.txt', 'r') as open_file:
-    names = ()
+    names = []
        
     while True:
         line = open_file.readline()
