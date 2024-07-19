@@ -38,11 +38,13 @@ def output(game_board):
 def move(game_board, player):
     coords_str = input(f"Player {player}: Enter your move in the format (row,col): ")
     
-    list = coords_str.split(',')
-    coords = list(map(int, list))
+    coords_list = coords_str.split(',')
+    coords = list(map(int, coords_list))
     
     game_board[coords[0]][coords[1]] = player
 
+    output(game_board)
+    
     if is_any_move(game_board) == False or any_winner(game_board) != NoOne:
         print("The winner is " + any_winner(game_board) + '.')
         return False
